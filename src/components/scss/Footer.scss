@@ -1,0 +1,19 @@
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .footer-text {
+    font-size: 1.5rem;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    color: #efeae6;
+    text-shadow: 0 2px 5px #c4b59d, 0px -6px 1px #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+}
