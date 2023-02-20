@@ -7,8 +7,8 @@
   font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
   text-transform: uppercase;
   display: flex;
-  flex-direction: row;
-  color: #efeae6;
+  flex-direction: column;
+  color: #efedec;
   text-shadow: 0 12px 10px #c4b59d, 0px -6px 1px #fff;
   font-size: 4rem;
   font-weight: bold;
@@ -17,17 +17,18 @@
 
   .text {
     padding: 0.5rem 1.5rem;
+    text-align: start;
   }
-  // .text:nth-child(2) {
-  //   margin-top: 24px;
-  //   font-size: 3.4rem;
-  //   text-align: center;
-  // }
-  // .text:nth-child(3) {
-  //   margin-top: 24px;
-  //   font-size: 3.4rem;
-  //   text-align: right;
-  // }
+  .text:nth-child(2) {
+    // margin-top: 24px;
+    // font-size: 3.4rem;
+    text-align: center;
+  }
+  .text:nth-child(3) {
+    // margin-top: 24px;
+    // font-size: 3.4rem;
+    text-align: right;
+  }
 
   // .text-1 {
   //   margin: 0;
