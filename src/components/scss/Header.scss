@@ -8,15 +8,15 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  color: #efedec;
-  text-shadow: 0 12px 10px #c4b59d, 0px -6px 1px #fff;
+  color: #fff7eb;
+  text-shadow: 0 12px 10px #d3c1a5, 0px -6px 1px #fdecdf;
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: -4px;
   text-align: center;
 
   .text {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 3rem;
     text-align: start;
   }
   .text:nth-child(2) {

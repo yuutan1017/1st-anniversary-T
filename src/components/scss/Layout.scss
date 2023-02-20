@@ -1,17 +1,17 @@
 * {
-  outline: solid 1px magenta;
+  // outline: solid 1px magenta;
 
   display: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
-  background-color: white;
   justify-content: center;
   align-items: center;
 }
+
+$base-bg: #fff7eb;
 
 .layout {
   display: flex;
@@ -20,7 +20,43 @@ body {
   align-items: center;
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #edeceb;
+  background-color: $base-bg;
+
+  .curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $base-bg;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+
+    .dot {
+      display: inline-flex;
+      align-items: center;
+      pointer-events: none;
+      gap: 3rem;
+
+      span {
+        margin: 1rem;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #55d1cb;
+      }
+      span:nth-child(2) {
+        background-color: #ffe66a;
+      }
+
+      span:nth-child(3) {
+        background-color: #ee5385;
+      }
+    }
+  }
 
   .main {
     display: flex;
