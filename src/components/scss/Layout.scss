@@ -1,6 +1,5 @@
 * {
   // outline: solid 1px magenta;
-
   display: border-box;
   margin: 0;
   padding: 0;
@@ -9,9 +8,10 @@
 body {
   justify-content: center;
   align-items: center;
+  
 }
 
-$base-bg: #fff7eb;
+$base-bg: white;
 
 .layout {
   display: flex;
@@ -19,8 +19,11 @@ $base-bg: #fff7eb;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  min-width: 100vw;
   background-color: $base-bg;
+
+  @media screen and (max-width:480px) {
+  }
+
 
   .curtain {
     position: fixed;

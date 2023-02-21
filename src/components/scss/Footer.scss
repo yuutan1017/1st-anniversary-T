@@ -5,15 +5,27 @@
   align-items: center;
   padding: 20px;
 
+  @media screen and (max-width:480px) {
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
   .footer-text {
     font-size: 1.5rem;
     font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
-    color: #fff7eb;
-    text-shadow: 0 12px 10px #d3c1a5, 0px -6px 1px #fdecdf;
+    color: #eee0ca;
+    text-shadow: 0 1px 1px #d3c1a5, 0px -6px 1px #fdecdf;
     font-weight: bold;
     text-align: center;
+
+    @media screen and (max-width:480px) {
+      font-size: 1rem;
+      font-weight: normal;
+
+    }
   }
 }

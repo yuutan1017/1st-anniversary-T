@@ -8,16 +8,29 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: #fff7eb;
   text-shadow: 0 12px 10px #d3c1a5, 0px -6px 1px #fdecdf;
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: -4px;
   text-align: center;
+  margin-top: 24px;
+
+  @media screen and (max-width:480px) {
+    font-size: 2.5rem;
+  }
+
 
   .text {
     padding: 0.5rem 3rem;
     text-align: start;
+
+    @media screen and (max-width:480px) {
+      padding: 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
   }
   .text:nth-child(2) {
     // margin-top: 24px;
