@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import gsap from 'gsap'
 
 import { Header } from './Header'
@@ -6,7 +5,7 @@ import { Footer } from './Footer'
 
 import './scss/Layout.scss'
 
-window.onload = () => {
+window.addEventListener('load', function () {
   const opening = gsap.timeline()
   const dots = [
     document.querySelector('.dot > span:nth-child(1)'),
@@ -44,7 +43,7 @@ window.onload = () => {
         delay: 1,
       }
     )
-}
+})
 
 export const Layout = ({ children }: any): JSX.Element => {
   return (
