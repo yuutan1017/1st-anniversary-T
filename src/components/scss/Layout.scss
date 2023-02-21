@@ -8,7 +8,6 @@
 body {
   justify-content: center;
   align-items: center;
-  
 }
 
 $base-bg: white;
@@ -21,9 +20,8 @@ $base-bg: white;
   min-height: 100vh;
   background-color: $base-bg;
 
-  @media screen and (max-width:480px) {
+  @media screen and (max-width: 480px) {
   }
-
 
   .curtain {
     position: fixed;
@@ -61,6 +59,46 @@ $base-bg: white;
     }
   }
 
+  .header-text {
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff7eb;
+    text-shadow: 0 12px 10px #d3c1a5, 0px -6px 1px #fdecdf;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: -4px;
+    text-align: center;
+    margin-top: 24px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 2.5rem;
+    }
+
+    .text {
+      padding: 0.5rem 3rem;
+      text-align: start;
+
+      @media screen and (max-width: 480px) {
+        padding: 0.5rem 1.5rem;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .text:nth-child(2) {
+      // margin-top: 24px;
+      // font-size: 3.4rem;
+      text-align: center;
+    }
+    .text:nth-child(3) {
+      // margin-top: 24px;
+      // font-size: 3.4rem;
+      text-align: right;
+    }
+  }
+
   .main {
     display: flex;
     flex-direction: column;
@@ -69,5 +107,36 @@ $base-bg: white;
     text-align: center;
     min-width: 100%;
     min-height: 80vh;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    @media screen and (max-width: 480px) {
+      padding: 0.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-text {
+      font-size: 1.5rem;
+      font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial,
+        sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      color: #eee0ca;
+      text-shadow: 0 1px 1px #d3c1a5, 0px -6px 1px #fdecdf;
+      font-weight: bold;
+      text-align: center;
+
+      @media screen and (max-width: 480px) {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
   }
 }

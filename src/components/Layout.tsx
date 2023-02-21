@@ -1,8 +1,4 @@
 import gsap from 'gsap'
-
-import { Header } from './Header'
-import { Footer } from './Footer'
-
 import './scss/Layout.scss'
 
 window.addEventListener('load', function () {
@@ -39,9 +35,14 @@ window.addEventListener('load', function () {
       {
         z: 100,
         opacity: 0,
-        duration: 1.5,
+        duration: 1,
         delay: 1,
       }
+    )
+    .fromTo(
+      document.querySelector('.header-text'),
+      { y: -40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.2, delay: 0.3 }
     )
 })
 
@@ -55,9 +56,20 @@ export const Layout = ({ children }: any): JSX.Element => {
           <span></span>
         </div>
       </div>
-      <Header />
+      <header>
+        <div className="header-text">
+          <p className="text">1st</p>
+          <p className="text">Anniversary</p>
+          <p className="text">Tsukasa</p>
+          <div className="milky"></div>
+        </div>
+      </header>
       <main className="main">{children}</main>
-      <Footer />
+      <footer className="footer-container">
+        <span className="footer-text">
+          &copy; 2023 Yuta N. All Rights Reserved.
+        </span>
+      </footer>
     </div>
   )
 }

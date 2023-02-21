@@ -1,13 +1,15 @@
-import React from 'react'
+import { Layout } from './components/Layout'
 
-import './App.scss'
-
-setTimeout(() => {
-  document.body.style.overflowY = 'auto'
-}, 6000)
 
 const App = () => {
-  return <div className="app"></div>
+  return (
+    <>
+      <Layout>
+        <div>1-12</div>
+        <div>slide-show</div>
+      </Layout>
+    </>
+  )
 }
 
 export default App
