@@ -2,12 +2,11 @@ import gsap from 'gsap'
 import './scss/Layout.scss'
 
 function openingAnimation() {
-
   const opening = gsap.timeline()
   const dots = [
-    document.querySelector('.dot > span:nth-child(1)'),
-    document.querySelector('.dot > span:nth-child(2)'),
-    document.querySelector('.dot > span:nth-child(3)'),
+    '.dots > span:nth-child(1)',
+    '.dots > span:nth-child(2)',
+    '.dots > span:nth-child(3)',
   ]
   const start = { y: -300, autoAlpha: 0 }
   const end = {
@@ -28,23 +27,23 @@ function openingAnimation() {
     })
     .to(dots[2], { y: 0, duration: 0.8, ease: 'Elastic.easeOut' })
     .fromTo(
-      document.querySelector('.curtain'),
+      '.curtain',
       {
         y: 0,
         autoAlpha: 1,
       },
       {
-        z: 100,
-        autoAlpha: 0,
-        duration: 1,
+        y: '-100%',
+        // autoAlpha: 0,
+        duration: 0.8,
         delay: 1,
       }
     )
     .fromTo(
-      document.querySelector('.header-text'),
+      '.header-text',
       { y: -40, autoAlpha: 0 },
       { y: 0, autoAlpha: 1, duration: 1.2, delay: 0.3 }
-  )
+    )
 }
 
 window.addEventListener('load', () => {
@@ -55,7 +54,7 @@ export const Layout = ({ children }: any): JSX.Element => {
   return (
     <div className="layout">
       <div className="curtain">
-        <div id='dots' className="dot">
+        <div className="dots">
           <span></span>
           <span></span>
           <span></span>

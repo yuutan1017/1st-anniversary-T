@@ -34,6 +34,7 @@ $base-bg: rgb(240, 232, 222);
     display: grid;
     place-items: center;
     pointer-events: none;
+    background-color: white;
 
     .start-btn {
       cursor: pointer;
@@ -43,7 +44,7 @@ $base-bg: rgb(240, 232, 222);
       background-color: white;
     }
 
-    .dot {
+    .dots {
       display: inline-flex;
       align-items: center;
       pointer-events: none;
