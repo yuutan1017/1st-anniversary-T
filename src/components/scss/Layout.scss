@@ -10,7 +10,7 @@ body {
   align-items: center;
 }
 
-$base-bg: white;
+$base-bg: rgb(240, 232, 222);
 
 .layout {
   display: flex;
@@ -35,6 +35,14 @@ $base-bg: white;
     place-items: center;
     pointer-events: none;
 
+    .start-btn {
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
     .dot {
       display: inline-flex;
       align-items: center;
@@ -50,7 +58,7 @@ $base-bg: white;
         background-color: #55d1cb;
       }
       span:nth-child(2) {
-        background-color: #ffe66a;
+        background-color: #fadf58;
       }
 
       span:nth-child(3) {
