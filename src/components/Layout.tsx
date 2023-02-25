@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import './scss/Layout.scss'
 
-function openingAnimation() {
+const openingAnimation = () => {
   const opening = gsap.timeline()
   const dots = [
     '.dots > span:nth-child(1)',

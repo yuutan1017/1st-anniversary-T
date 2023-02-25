@@ -1,0 +1,37 @@
+section {
+  .image-bg {
+    margin-top: 3rem;
+    .image {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      img {
+        width: 300px;
+        height: 380px;
+      }
+    }
+
+    .image::before,
+    .image::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .image::before {
+      top: -15px;
+      right: -15px;
+      border-width: 0 100px 100px 0;
+      border-color: transparent #053e62 transparent transparent;
+    }
+
+    .image::after {
+      bottom: -15px;
+      left: -15px;
+      border-width: 100px 0 0 100px;
+      border-color: transparent transparent transparent #053e62;
+    }
+  }
+}
