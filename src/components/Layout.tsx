@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
 
 export const Layout = ({ children }: any): JSX.Element => {
   return (
-    <div className="layout">
+    <>
       <div className="curtain">
         <div className="dots">
           <span></span>
@@ -60,20 +60,22 @@ export const Layout = ({ children }: any): JSX.Element => {
           <span></span>
         </div>
       </div>
-      <header>
-        <div className="header-text">
-          <p className="text">1st</p>
-          <p className="text">Anniversary</p>
-          <p className="text">Tsukasa</p>
-          <div className="milky"></div>
-        </div>
-      </header>
-      <main className="main">{children}</main>
-      <footer className="footer-container">
-        <span className="footer-text">
-          &copy; 2023 Yuta N. All Rights Reserved.
-        </span>
-      </footer>
-    </div>
+      <div className="layout">
+        <header>
+          <div className="header-text">
+            <p className="text">1st</p>
+            <p className="text">Anniversary</p>
+            <p className="text">Tsukasa</p>
+            <div className="milky"></div>
+          </div>
+        </header>
+        <main className="main">{children}</main>
+        <footer className="footer-container">
+          <span className="footer-text">
+            &copy; 2023 Yuta N. All Rights Reserved.
+          </span>
+        </footer>
+      </div>
+    </>
   )
 }

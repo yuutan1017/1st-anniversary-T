@@ -3,11 +3,9 @@ import { History } from './components/History'
 
 const App = () => {
   return (
-    <>
-      <Layout>
-        <History />
-      </Layout>
-    </>
+    <Layout>
+      <History />
+    </Layout>
   )
 }
 
