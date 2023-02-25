@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import './scss/Layout.scss'
+import '../scss/Layout.scss'
 
 const openingAnimation = () => {
   const opening = gsap.timeline()

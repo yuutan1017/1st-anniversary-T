@@ -1,16 +1,15 @@
 section {
+
   .image-bg {
-    margin-top: 3rem;
+    margin: 3rem;
+    background-color: white;
+    padding: 15px;
+
     .image {
       position: relative;
-      margin: 0;
-      padding: 0;
-      img {
-        width: 300px;
-        height: 380px;
-      }
-    }
+      text-align: center;
 
+    }
     .image::before,
     .image::after {
       content: '';
@@ -24,14 +23,20 @@ section {
       top: -15px;
       right: -15px;
       border-width: 0 100px 100px 0;
-      border-color: transparent #053e62 transparent transparent;
+      border-color: transparent #4bceec transparent transparent;
     }
 
     .image::after {
       bottom: -15px;
       left: -15px;
       border-width: 100px 0 0 100px;
-      border-color: transparent transparent transparent #053e62;
+      border-color: transparent transparent transparent #4bceec;
+    }
+
+    img {
+      width: 300px;
+      height: 400px;
+      vertical-align:top;
     }
   }
 }

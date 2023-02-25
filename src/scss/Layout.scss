@@ -10,7 +10,7 @@ body {
   align-items: center;
 }
 
-$base-bg: rgb(240, 232, 222);
+$base-bg: rgb(244, 239, 233);
 
 .layout {
   display: flex;
@@ -19,6 +19,7 @@ $base-bg: rgb(240, 232, 222);
   align-items: center;
   min-height: 100vh;
   background-color: $base-bg;
+  
 
   @media screen and (max-width: 480px) {
   }
