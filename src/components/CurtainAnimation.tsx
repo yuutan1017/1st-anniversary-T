@@ -2,7 +2,6 @@ import { useState } from 'react'
 import '../scss/CurtainAnimation.scss'
 
 
-
 export const CurtainAnimation = () => {
   const [visible, setVisible] = useState<boolean>(false)
   const start_animation = () => {
