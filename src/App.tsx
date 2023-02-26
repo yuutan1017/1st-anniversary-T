@@ -2,11 +2,14 @@ import { Layout } from './components/Layout'
 import { History } from './components/History'
 
 import openingAnimation from './animation/animation'
+import { useEffect } from 'react'
 
 const App = () => {
-  window.addEventListener('load', () => {
+  useEffect(() => {
     openingAnimation()
+    console.log("animation start")
   })
+  // openingAnimation()
 
   return (
     <>
