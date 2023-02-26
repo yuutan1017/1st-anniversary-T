@@ -1,42 +1,79 @@
+$January: #db4126;
+$February: #2c70ae;
+$March: #e77575;
+$April: #83b326;
+$May: #08a29a;
+$June: #9c3e89;
+$July: #33a1dc;
+$August: #e3831b;
+$September: #3a6b29;
+$October: #a6770c;
+$November: #854522;
+$December: #4a4c93;
+
 section {
+  .headline {
+    display: flex;
+    margin: 48px 0 0;
+    margin-left: auto;
+  
+    h2 {
+      font-size: 2rem;
+      padding: 0 10px;
+      color: #d1a768e8;
+      text-shadow: 0 4px 10px #d3c1a5, 0px 16px 1px #fdecdf;
+    }
+  }
 
   .image-bg {
-    margin: 3rem;
-    background-color: white;
-    padding: 15px;
+    
+    padding: 1.5rem 2rem;
+    
 
     .image {
+      margin: 2rem 1rem 10px;
       position: relative;
       text-align: center;
+      box-shadow: 20px 20px 0 $January;
 
+      img {
+        width: 265px;
+        height: 370px;
+        vertical-align: top;
+      }
     }
-    .image::before,
-    .image::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-style: solid;
+    .image:nth-child(2) {
+      box-shadow: 20px 20px 0 $February;
     }
-
-    .image::before {
-      top: -15px;
-      right: -15px;
-      border-width: 0 100px 100px 0;
-      border-color: transparent #4bceec transparent transparent;
+    .image:nth-child(3) {
+      box-shadow: 20px 20px 0 $March;
     }
-
-    .image::after {
-      bottom: -15px;
-      left: -15px;
-      border-width: 100px 0 0 100px;
-      border-color: transparent transparent transparent #4bceec;
-    }
-
-    img {
-      width: 300px;
-      height: 400px;
-      vertical-align:top;
+    .image:nth-child(4) {
+      box-shadow: 20px 20px 0 $April;
     }
   }
 }
+
+// }
+// .image::before,
+// .image::after {
+//   content: '';
+//   position: absolute;
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+// }
+
+// .image::before {
+//   top: -15px;
+//   right: -15px;
+//   border-width: 0 100px 100px 0;
+//   border-color: transparent #4bceec transparent transparent;
+// }
+
+// .image::after {
+//   bottom: -15px;
+//   left: -15px;
+//   border-width: 100px 0 0 100px;
+//   border-color: transparent transparent transparent #4bceec;
+// }

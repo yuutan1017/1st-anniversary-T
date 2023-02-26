@@ -9,7 +9,6 @@ import openingAnimation from './animation/animation'
 const App = () => {
   useEffect(() => {
     openingAnimation()
-    console.log('animation start')
   })
 
   return (

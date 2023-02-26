@@ -33,7 +33,7 @@ const openingAnimation = () => {
       },
       {
         y: '-100%',
-        // autoAlpha: 0,
+        autoAlpha: 0,
         duration: 0.8,
         delay: 1,
       }

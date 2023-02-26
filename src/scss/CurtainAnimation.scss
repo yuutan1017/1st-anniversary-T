@@ -16,9 +16,10 @@ $base-bg: rgb(240, 240, 240);
     display: inline-flex;
     align-items: center;
     pointer-events: none;
-    gap: 3rem;
+    gap: 2.5rem;
 
     span {
+      cursor: pointer;
       margin: 1rem;
       display: block;
       width: 40px;
