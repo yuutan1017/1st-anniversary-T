@@ -1,14 +1,13 @@
 import '../scss/Layout.scss'
 
-
 export const Layout = ({ children }: any): JSX.Element => {
   return (
     <div className="layout">
       <header>
         <div className="header-text">
-          <p className="text">1st</p>
-          <p className="text">Anniversary</p>
-          <p className="text">Tsukasa</p>
+          <div className="text">1st</div>
+          <div className="text">Anniversary</div>
+          <div className="text">Tsukasa</div>
           <div className="milky"></div>
         </div>
       </header>

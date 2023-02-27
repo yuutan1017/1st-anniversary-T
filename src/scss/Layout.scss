@@ -1,11 +1,7 @@
-* {
-  // outline: solid 1px magenta;
+body {
   display: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
   justify-content: center;
   align-items: center;
 }
@@ -43,22 +39,22 @@ $base-bg: rgb(244, 239, 233);
 
     .text {
       padding: 0.5rem 3rem;
+      display: flex;
+      flex-direction: row;
       text-align: start;
 
       @media screen and (max-width: 480px) {
         padding: 0.5rem 1.5rem;
-        align-items: center;
-        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        text-align: start;
       }
     }
     .text:nth-child(2) {
-      // margin-top: 24px;
-      // font-size: 3.4rem;
       text-align: center;
     }
     .text:nth-child(3) {
-      // margin-top: 24px;
-      // font-size: 3.4rem;
+      margin-left: auto;
       text-align: right;
     }
   }

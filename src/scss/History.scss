@@ -26,9 +26,15 @@ section {
   }
 
   .image-bg {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     padding: 2rem;
     row-gap: 1rem;
+
+    @media screen and (max-width: 480px) {
+      display: grid;
+      flex-direction: none;
+    }
     
     .image {
       margin: 1.5rem;

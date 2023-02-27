@@ -4,9 +4,9 @@ export const CurtainAnimation = () => {
   return (
     <div className="curtain">
       <div className="dots">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span className='dot'></span>
+        <span className='dot'></span>
+        <span className='dot'></span>
       </div>
     </div>
   )
