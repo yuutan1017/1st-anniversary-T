@@ -1,24 +1,25 @@
 import '../scss/History.scss'
 
-export const History = () => {
+const monthCount = [...Array(12)].map((_, i) => i + 1)
+
+export const History = (): JSX.Element => {
+  const ImagesForMonth = (): JSX.Element => (
+    <>
+      {monthCount.map((i) => (
+        <div key={i} className="image">
+          <img src={`tsukasa(4).jpeg`} alt="image" />
+        </div>
+      ))}
+    </>
+  )
+
   return (
     <section>
       <div className="headline">
         <h2>History</h2>
       </div>
       <div className="image-bg">
-        <div className="image">
-          <img src="tsukasa(1).jpeg" alt="image" />
-        </div>
-        <div className="image">
-          <img src="tsukasa(2).jpeg" alt="image" />
-        </div>
-        <div className="image">
-          <img src="tsukasa(3).jpeg" alt="image" />
-        </div>
-        <div className="image">
-          <img src="tsukasa(4).jpeg" alt="image" />
-        </div>
+        <ImagesForMonth />
       </div>
     </section>
   )

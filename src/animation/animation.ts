@@ -24,7 +24,12 @@ const openingAnimation = (): void => {
 
   const dots = ['.dot:nth-child(1)', '.dot:nth-child(2)', '.dot:nth-child(3)']
   const dotAnime_to = { y: -300, autoAlpha: 0 }
-  const dotAnime_from = { y: 0, autoAlpha: 1, duration: 0.8, ease: 'Bounce.easeOut' }
+  const dotAnime_from = {
+    y: 0,
+    autoAlpha: 1,
+    duration: 0.8,
+    ease: 'Bounce.easeOut',
+  }
 
   const headlineAnime_to = { y: -40, autoAlpha: 0 }
   const headlineAnime_from = {
@@ -63,6 +68,7 @@ const openingAnimation = (): void => {
     .fromTo(`${headlineTexts[0]} > span`, headlineAnime_to, headlineAnime_from)
     .fromTo(`${headlineTexts[1]} > span`, headlineAnime_to, headlineAnime_from)
     .fromTo(`${headlineTexts[2]} > span`, headlineAnime_to, headlineAnime_from)
+    .fromTo('.headline > h2', { autoAlpha: 0, y: -20 }, { autoAlpha: 1, y: 0 })
 }
 
 const scrollAnimation = () => {

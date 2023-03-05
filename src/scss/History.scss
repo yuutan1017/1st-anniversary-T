@@ -16,7 +16,7 @@ section {
     display: flex;
     margin: 48px 0 0;
     margin-left: auto;
-  
+
     h2 {
       font-size: 2rem;
       padding: 0 10px;
@@ -26,16 +26,16 @@ section {
   }
 
   .image-bg {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2rem;
     row-gap: 1rem;
 
     @media screen and (max-width: 480px) {
-      display: grid;
-      flex-direction: none;
+      display: flex;
+      flex-direction: column;
     }
-    
+
     .image {
       margin: 1.5rem;
       text-align: center;
@@ -55,6 +55,30 @@ section {
     }
     .image:nth-child(4) {
       box-shadow: 20px 20px 0 $April;
+    }
+    .image:nth-child(5) {
+      box-shadow: 20px 20px 0 $May;
+    }
+    .image:nth-child(6) {
+      box-shadow: 20px 20px 0 $June;
+    }
+    .image:nth-child(7) {
+      box-shadow: 20px 20px 0 $July;
+    }
+    .image:nth-child(8) {
+      box-shadow: 20px 20px 0 $August;
+    }
+    .image:nth-child(9) {
+      box-shadow: 20px 20px 0 $September;
+    }
+    .image:nth-child(10) {
+      box-shadow: 20px 20px 0 $October;
+    }
+    .image:nth-child(11) {
+      box-shadow: 20px 20px 0 $November;
+    }
+    .image:nth-child(12) {
+      box-shadow: 20px 20px 0 $December;
     }
   }
 }
