@@ -6,7 +6,7 @@ body {
   align-items: center;
 }
 
-$base-bg: rgb(244, 239, 233);
+$base-bg: rgb(255, 248, 240);
 
 .layout {
   display: flex;
@@ -23,22 +23,25 @@ $base-bg: rgb(244, 239, 233);
     font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
     text-transform: uppercase;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    color: #fff7eb;
-    text-shadow: 0 12px 10px #d3c1a5, 0px -6px 1px #fdecdf;
-    font-size: 4rem;
+    color: #fef4e5;
+    text-shadow: 0 12px 10px #ccbba0, 0px -6px 1px #fdecdf;
+    font-size: 5rem;
     font-weight: bold;
     letter-spacing: -4px;
     text-align: center;
-    margin-top: 24px;
+    margin-top: 7rem;
 
     @media screen and (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
       font-size: 2.5rem;
     }
 
     .text {
-      padding: 0.5rem 3rem;
+      padding: 0.5rem 2.95rem;
       display: flex;
       flex-direction: row;
       text-align: start;

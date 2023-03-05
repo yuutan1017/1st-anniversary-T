@@ -12,16 +12,21 @@ $November: #854522;
 $December: #4a4c93;
 
 section {
+  .border {
+    margin: 3.5rem 0.5rem 2rem;
+    text-shadow: 0 4px 4px #d3c1a5, 0px 6px 6px #fdecdf;
+    border-bottom: 3px solid #c8b08ce8;
+  }
   .headline {
     display: flex;
-    margin: 48px 0 0;
-    margin-left: auto;
+    padding: 0 3rem;
+    // margin-left: auto;
 
     h2 {
       font-size: 2rem;
       padding: 0 10px;
-      color: #d1a768e8;
-      text-shadow: 0 4px 10px #d3c1a5, 0px 16px 1px #fdecdf;
+      color: #cdab78e8;
+      text-shadow: 0 4px 4px #d3c1a5, 0px 6px 6px #fdecdf;
     }
   }
 

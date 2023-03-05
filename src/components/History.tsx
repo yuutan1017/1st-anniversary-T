@@ -15,6 +15,7 @@ export const History = (): JSX.Element => {
 
   return (
     <section>
+      <div className="border"></div>
       <div className="headline">
         <h2>History</h2>
       </div>
