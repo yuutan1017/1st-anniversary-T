@@ -57,14 +57,16 @@ section {
       flex-direction: column;
     }
 
-    .image {
+    .image-frame {
       position: relative;
       margin: 1.5rem;
       text-align: center;
+      border-radius: 7px;
 
       img {
         width: 265px;
         height: 370px;
+        border-radius: 7px;
         vertical-align: top;
       }
 
@@ -93,10 +95,13 @@ section {
     $num: 0;
     @each $key, $value in $Month {
       $num: $num + 1;
-      .image:nth-child(#{$num}) {
-        box-shadow: 20px 20px 0px $value;
+      .image-frame:nth-child(#{$num}) {
+        box-shadow: 15px 15px 0px $value;
+        img {
+          border: solid 3px $value;
+        }
         .month {
-        border: solid 20px $value;
+          border: solid 15px $value;
           span {
             color: $value;
           }
