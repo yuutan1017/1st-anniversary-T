@@ -94,9 +94,9 @@ section {
     @each $key, $value in $Month {
       $num: $num + 1;
       .image:nth-child(#{$num}) {
-        box-shadow: 20px 20px 0 $value;
+        box-shadow: 20px 20px 0px $value;
         .month {
-          outline: 20px solid $value;
+        border: solid 20px $value;
           span {
             color: $value;
           }
