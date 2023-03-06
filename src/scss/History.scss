@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $January: #db4126;
 $February: #2c70ae;
 $March: #e77575;
@@ -10,6 +12,21 @@ $September: #3a6b29;
 $October: #a6770c;
 $November: #854522;
 $December: #4a4c93;
+
+$Month: (
+  $January: #db4126,
+  $February: #2c70ae,
+  $March: #e77575,
+  $April: #83b326,
+  $May: #08a29a,
+  $June: #9c3e89,
+  $July: #33a1dc,
+  $August: #e3831b,
+  $September: #3a6b29,
+  $October: #a6770c,
+  $November: #854522,
+  $December: #4a4c93,
+);
 
 section {
   .border {
@@ -33,8 +50,8 @@ section {
   .image-bg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 2rem;
-    row-gap: 1rem;
+    padding: 2.5rem;
+    row-gap: 1.5rem;
 
     @media screen and (max-width: 480px) {
       display: flex;
@@ -42,72 +59,48 @@ section {
     }
 
     .image {
+      position: relative;
       margin: 1.5rem;
       text-align: center;
-      box-shadow: 20px 20px 0 $January;
 
       img {
         width: 265px;
         height: 370px;
         vertical-align: top;
       }
+
+      .month {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 75px;
+        height: 75px;
+        border-radius: 100px;
+        background-color: rgb(255, 250, 250);
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
     }
-    .image:nth-child(2) {
-      box-shadow: 20px 20px 0 $February;
-    }
-    .image:nth-child(3) {
-      box-shadow: 20px 20px 0 $March;
-    }
-    .image:nth-child(4) {
-      box-shadow: 20px 20px 0 $April;
-    }
-    .image:nth-child(5) {
-      box-shadow: 20px 20px 0 $May;
-    }
-    .image:nth-child(6) {
-      box-shadow: 20px 20px 0 $June;
-    }
-    .image:nth-child(7) {
-      box-shadow: 20px 20px 0 $July;
-    }
-    .image:nth-child(8) {
-      box-shadow: 20px 20px 0 $August;
-    }
-    .image:nth-child(9) {
-      box-shadow: 20px 20px 0 $September;
-    }
-    .image:nth-child(10) {
-      box-shadow: 20px 20px 0 $October;
-    }
-    .image:nth-child(11) {
-      box-shadow: 20px 20px 0 $November;
-    }
-    .image:nth-child(12) {
-      box-shadow: 20px 20px 0 $December;
+    //画像のbox-shadowを繰り返しで当てる
+    $num: 0;
+    @each $key, $value in $Month {
+      $num: $num + 1;
+      .image:nth-child(#{$num}) {
+        box-shadow: 20px 20px 0 $value;
+        .month {
+          outline: 3px solid $value;
+          span {
+            color: $value;
+          }
+        }
+      }
     }
   }
 }
-
-// }
-// .image::before,
-// .image::after {
-//   content: '';
-//   position: absolute;
-//   width: 0;
-//   height: 0;
-//   border-style: solid;
-// }
-
-// .image::before {
-//   top: -15px;
-//   right: -15px;
-//   border-width: 0 100px 100px 0;
-//   border-color: transparent #4bceec transparent transparent;
-// }
-
-// .image::after {
-//   bottom: -15px;
-//   left: -15px;
-//   border-width: 100px 0 0 100px;
-//   border-color: transparent transparent transparent #4bceec;
-// }
