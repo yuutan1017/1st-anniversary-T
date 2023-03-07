@@ -1,31 +1,31 @@
 @use 'sass:map';
 
-$January: #db4126;
-$February: #2c70ae;
-$March: #e77575;
-$April: #83b326;
-$May: #08a29a;
-$June: #9c3e89;
-$July: #33a1dc;
-$August: #e3831b;
-$September: #3a6b29;
-$October: #a6770c;
-$November: #854522;
-$December: #4a4c93;
+// $January: #db4126;
+// $February: #2c70ae;
+// $March: #e77575;
+// $April: #83b326;
+// $May: #08a29a;
+// $June: #9c3e89;
+// $July: #33a1dc;
+// $August: #e3831b;
+// $September: #3a6b29;
+// $October: #a6770c;
+// $November: #854522;
+// $December: #4a4c93;
 
 $Month: (
-  $January: #db4126,
-  $February: #2c70ae,
-  $March: #e77575,
-  $April: #83b326,
-  $May: #08a29a,
-  $June: #9c3e89,
-  $July: #33a1dc,
-  $August: #e3831b,
-  $September: #3a6b29,
-  $October: #a6770c,
-  $November: #854522,
-  $December: #4a4c93,
+  #db4126,
+  #2c70ae,
+  #e77575,
+  #83b326,
+  #08a29a,
+  #9c3e89,
+  #33a1dc,
+  #e3831b,
+  #3a6b29,
+  #a6770c,
+  #854522,
+  #4a4c93
 );
 
 section {
@@ -71,7 +71,7 @@ section {
         border-radius: 7px;
         vertical-align: top;
       }
-      .background{
+      .background {
         z-index: 0;
         position: absolute;
         top: 5%;
@@ -105,14 +105,13 @@ section {
     }
     //画像のbox-shadowを繰り返しで当てる
     $num: 0;
-    @each $key, $value in $Month {
+    @each $value in $Month {
       $num: $num + 1;
       .image-frame:nth-child(#{$num}) {
-        // box-shadow: 15px 15px 0px $value;
         img {
           border: solid 3px $value;
         }
-        .background{
+        .background {
           background-color: $value;
         }
         .month {

@@ -1,16 +1,8 @@
-import '../scss/Bubble.scss'
+import '../scss/Leaf.scss'
 
-export const Bubble = () => {
+export const Leaf = () => {
   return (
     <ul className="sakura">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
       <li></li>
       <li></li>
       <li></li>

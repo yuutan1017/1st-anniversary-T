@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap');
-
+@use 'sass:map';
+@use 'History';
 
 .sakura {
   position: absolute;
@@ -10,7 +10,7 @@
 
   @media screen and (max-width: 480px) {
     width: 50%;
-    }
+  }
 }
 
 .sakura li {
@@ -43,6 +43,16 @@
   }
   to {
     transform: translateX(0px) rotate(0deg);
+  }
+}
+
+$index: 0;
+
+@each $value in History.$Month {
+  $index: $index + 1;
+
+  .sakura li:nth-child(#{$index}) {
+    background: $value;
   }
 }
 
@@ -111,4 +121,25 @@
   height: 10px;
   animation: fall 10s linear infinite, sway2 4s ease-in-out infinite alternate;
   animation-delay: 4s;
+}
+.sakura li:nth-child(10) {
+  left: 80%;
+  width: 16px;
+  height: 10px;
+  animation: fall 10s linear infinite, sway2 4s ease-in-out infinite alternate;
+  animation-delay: 4s;
+}
+.sakura li:nth-child(11) {
+  left: 80%;
+  width: 16px;
+  height: 10px;
+  animation: fall 10s linear infinite, sway2 4s ease-in-out infinite alternate;
+  animation-delay: 4s;
+}
+.sakura li:nth-child(12) {
+  left: 55%;
+  width: 24px;
+  height: 15px;
+  animation: fall 11s linear infinite, sway2 3s ease-in-out infinite alternate;
+  animation-delay: 3s;
 }
