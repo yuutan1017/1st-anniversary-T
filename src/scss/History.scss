@@ -14,21 +14,23 @@
 // $December: #4a4c93;
 
 $Month: (
-  #db4126,
-  #2c70ae,
-  #e77575,
-  #83b326,
-  #08a29a,
-  #9c3e89,
-  #33a1dc,
-  #e3831b,
-  #3a6b29,
-  #a6770c,
-  #854522,
-  #4a4c93
+  #d72000,
+  #0056a6,
+  #ff7e7e,
+  #a6e033,
+  #00bcb2,
+  #e773d0,
+  #37b4f7,
+  #ffa03a,
+  #379b15,
+  #ffc02c,
+  #ea7a3d,
+  #8387fe
 );
 
 section {
+  z-index: 2;
+
   .border {
     margin: 4rem 0.5rem 2rem;
     text-shadow: 0 4px 4px #d3c1a5, 0px 6px 6px #fdecdf;
