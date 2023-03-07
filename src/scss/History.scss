@@ -64,13 +64,25 @@ section {
       border-radius: 7px;
 
       img {
+        z-index: 1;
+        position: relative;
         width: 265px;
         height: 370px;
         border-radius: 7px;
         vertical-align: top;
       }
+      .background{
+        z-index: 0;
+        position: absolute;
+        top: 5%;
+        left: 8%;
+        width: 265px;
+        height: 370px;
+        border-radius: 7px;
+      }
 
       .month {
+        z-index: 2;
         position: absolute;
         top: 94%;
         left: 94%;
@@ -96,9 +108,12 @@ section {
     @each $key, $value in $Month {
       $num: $num + 1;
       .image-frame:nth-child(#{$num}) {
-        box-shadow: 15px 15px 0px $value;
+        // box-shadow: 15px 15px 0px $value;
         img {
           border: solid 3px $value;
+        }
+        .background{
+          background-color: $value;
         }
         .month {
           border: solid 15px $value;

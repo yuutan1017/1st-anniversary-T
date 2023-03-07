@@ -16,12 +16,8 @@ export const History = (): JSX.Element => {
               x: 14,
               transition: { duration: 0.4, ease: 'easeInOut' },
             }}
-            whileTap={{
-              y: 14,
-              x: 14,
-              transition: { duration: 0.4, ease: 'easeInOut' },
-            }}
           />
+          <div className="background"></div>
           <div className="month">
             <span>{i}</span>
           </div>
