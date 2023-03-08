@@ -1,18 +1,20 @@
 @use 'sass:map';
 @use 'History';
 
-// *{outline: 1px solid magenta;}
+// * {
+//   outline: 1px solid magenta;
+// }
 
 .sakura {
-  position: absolute;
+  z-index: 0;
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 190vh;
-  overflow: hidden;
+  height: 250%;
 
   @media screen and (max-width: 480px) {
-    height: 700%;
+    position: absolute;
+    left: 0;
+    height: 600%;
   }
 }
 
@@ -23,38 +25,6 @@
   background: #e77575;
   border-radius: 80%;
   animation: balloon 10s linear infinite, sway 2s ease-in-out infinite alternate;
-}
-
-@keyframes balloon {
-  0% {
-    top: 100%;
-    bottom: -100px;
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    bottom: 1000px;
-  }
-}
-
-@keyframes sway1 {
-  from {
-    transform: translateX(0px) rotate(0deg);
-  }
-  to {
-    transform: translateX(300px) rotate(-45deg);
-  }
-}
-
-@keyframes sway2 {
-  from {
-    transform: translateX(200px) rotate(-45deg);
-  }
-  to {
-    transform: translateX(0px) rotate(0deg);
-  }
 }
 
 .sakura li:nth-child(1) {
@@ -101,7 +71,7 @@
   animation-delay: 0s;
 }
 .sakura li:nth-child(6) {
-  left: 55%;
+  left: 45%;
   // width: 24px;
   // height: 15px;
   animation: balloon 13s linear infinite,
@@ -125,7 +95,7 @@
   animation-delay: 3s;
 }
 .sakura li:nth-child(9) {
-  left: 70%;
+  left: 60%;
   // width: 16px;
   // height: 10px;
   animation: balloon 19s linear infinite,
@@ -133,7 +103,7 @@
   animation-delay: 4s;
 }
 .sakura li:nth-child(10) {
-  left: 80%;
+  left: 70%;
   // width: 16px;
   // height: 10px;
   animation: balloon 20s linear infinite,
@@ -141,7 +111,7 @@
   animation-delay: 4s;
 }
 .sakura li:nth-child(11) {
-  left: 850%;
+  left: 75%;
   // width: 16px;
   // height: 10px;
   animation: balloon 23s linear infinite,
@@ -149,7 +119,7 @@
   animation-delay: 4s;
 }
 .sakura li:nth-child(12) {
-  left: 90%;
+  left: 80%;
   // width: 24px;
   // height: 15px;
   animation: balloon 21s linear infinite,
@@ -168,7 +138,39 @@ $index: 0;
     background: $value;
 
     @media screen and (max-width: 480px) {
-      animation-duration: 50s;
+      animation-duration: 45s;
     }
+  }
+}
+
+@keyframes balloon {
+  0% {
+    top: 100%;
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 1000px;
+  }
+}
+
+@keyframes sway1 {
+  from {
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    transform: translateX(300px) rotate(-45deg);
+  }
+}
+
+@keyframes sway2 {
+  from {
+    transform: translateX(200px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
   }
 }

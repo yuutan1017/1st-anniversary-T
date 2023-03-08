@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { Layout } from './components/Layout'
 import { History } from './components/History'
 import { CurtainAnimation } from './components/CurtainAnimation'
-import { Leaf } from './components/Leaf'
+import { Balloon } from './components/Balloon'
 
 import openingAnimation from './animation/animation'
 
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <CurtainAnimation />
-      <Leaf />
+      {/* <Balloon /> */}
       <Layout>
         <History />
       </Layout>

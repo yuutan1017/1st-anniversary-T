@@ -1,4 +1,5 @@
 import '../scss/Layout.scss'
+import { Balloon } from './Balloon'
 
 export const Layout = ({ children }: any): JSX.Element => {
   return (
@@ -18,6 +19,7 @@ export const Layout = ({ children }: any): JSX.Element => {
             &copy; 2023 Yuta N. All Rights Reserved.
           </span>
         </footer>
+        <Balloon />
       </div>
     </>
   )

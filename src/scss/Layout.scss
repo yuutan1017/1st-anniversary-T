@@ -3,9 +3,10 @@
   display: border-box;
   margin: 0;
   padding: 0;
+
 }
 
-$base-bg: rgb(255, 255, 250);
+$base-bg: white;
 
 .layout {
   display: flex;
@@ -13,12 +14,14 @@ $base-bg: rgb(255, 255, 250);
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
   background-color: $base-bg;
 
   @media screen and (max-width: 480px) {
   }
 
   .header-text {
+    z-index: 5;
     font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
     text-transform: uppercase;
     display: flex;
@@ -41,6 +44,7 @@ $base-bg: rgb(255, 255, 250);
     }
 
     .text {
+      z-index: 5;
       padding: 0.5rem 3rem;
       display: flex;
       flex-direction: row;
@@ -66,6 +70,7 @@ $base-bg: rgb(255, 255, 250);
   }
 
   .main {
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -89,6 +94,7 @@ $base-bg: rgb(255, 255, 250);
     }
 
     .footer-text {
+      z-index: 5;
       font-size: 1.5rem;
       text-transform: uppercase;
       display: flex;

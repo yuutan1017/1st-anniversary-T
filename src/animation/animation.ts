@@ -1,5 +1,4 @@
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const headlineTexts = [
   '.text:nth-child(1)',
@@ -31,7 +30,7 @@ const openingAnimation = (): void => {
     ease: 'Bounce.easeOut',
   }
 
-  const headlineAnime_to = { y: -40, autoAlpha: 0 }
+  const headlineAnime_to = { y: 40, autoAlpha: 0 }
   const headlineAnime_from = {
     y: 0,
     autoAlpha: 1,
@@ -68,11 +67,13 @@ const openingAnimation = (): void => {
     .fromTo(`${headlineTexts[0]} > span`, headlineAnime_to, headlineAnime_from)
     .fromTo(`${headlineTexts[1]} > span`, headlineAnime_to, headlineAnime_from)
     .fromTo(`${headlineTexts[2]} > span`, headlineAnime_to, headlineAnime_from)
-    .fromTo('.headline > h2', { autoAlpha: 0, y: -20 }, { autoAlpha: 1, y: 0 })
-}
-
-const scrollAnimation = () => {
-  const scroll = gsap.timeline()
+    .fromTo('.border', { autoAlpha: 0, x: -200 }, { autoAlpha: 1, x: 0 })
+    .fromTo('.headline > h2', { autoAlpha: 0, y: 100 }, { autoAlpha: 1, y: 0 })
+    .fromTo(
+      '.image-frame',
+      { autoAlpha: 0, y: 40 },
+      { autoAlpha: 1, y: 0, stagger: 0.15 }
+    )
 }
 
 export default openingAnimation

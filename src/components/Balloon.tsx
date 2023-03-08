@@ -1,6 +1,6 @@
-import '../scss/Leaf.scss'
+import '../scss/Balloon.scss'
 
-export const Leaf = () => {
+export const Balloon = () => {
   return (
     <ul className="sakura">
       <li></li>
