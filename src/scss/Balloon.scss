@@ -5,11 +5,12 @@
 //   outline: 1px solid magenta;
 // }
 
-.sakura {
+.balloon {
   z-index: 0;
   padding: 0;
   margin: 0;
   height: 250%;
+  
 
   @media screen and (max-width: 480px) {
     position: absolute;
@@ -18,16 +19,15 @@
   }
 }
 
-.sakura li {
+.balloon li {
   position: absolute;
   list-style: none;
   top: -100px;
-  background: #e77575;
-  border-radius: 80%;
+  border-radius: 200px 200px 70px 200px;
   animation: balloon 10s linear infinite, sway 2s ease-in-out infinite alternate;
 }
 
-.sakura li:nth-child(1) {
+.balloon li:nth-child(1) {
   left: 0%;
   // width: 24px;
   // height: 15px;
@@ -36,7 +36,7 @@
   animation-delay: 2s;
 }
 
-.sakura li:nth-child(2) {
+.balloon li:nth-child(2) {
   left: 5%;
   // width: 13px;
   // height: 9px;
@@ -45,7 +45,7 @@
   animation-delay: 8s;
 }
 
-.sakura li:nth-child(3) {
+.balloon li:nth-child(3) {
   left: 15%;
   // width: 16px;
   // height: 10px;
@@ -54,7 +54,7 @@
   animation-delay: 13s;
 }
 
-.sakura li:nth-child(4) {
+.balloon li:nth-child(4) {
   left: 30%;
   // width: 16px;
   // height: 10px;
@@ -62,7 +62,7 @@
     sway2 4s ease-in-out infinite alternate;
   animation-delay: 7s;
 }
-.sakura li:nth-child(5) {
+.balloon li:nth-child(5) {
   left: 40%;
   // width: 16px;
   // height: 10px;
@@ -70,7 +70,7 @@
     sway1 4s ease-in-out infinite alternate;
   animation-delay: 0s;
 }
-.sakura li:nth-child(6) {
+.balloon li:nth-child(6) {
   left: 45%;
   // width: 24px;
   // height: 15px;
@@ -78,7 +78,7 @@
     sway2 3s ease-in-out infinite alternate;
   animation-delay: 3s;
 }
-.sakura li:nth-child(7) {
+.balloon li:nth-child(7) {
   left: 65%;
   // width: 16px;
   // height: 10px;
@@ -86,7 +86,7 @@
     sway2 3.5s ease-in-out infinite alternate;
   animation-delay: 7s;
 }
-.sakura li:nth-child(8) {
+.balloon li:nth-child(8) {
   left: 50%;
   // width: 13px;
   // height: 9px;
@@ -94,7 +94,7 @@
     sway1 3s ease-in-out infinite alternate;
   animation-delay: 3s;
 }
-.sakura li:nth-child(9) {
+.balloon li:nth-child(9) {
   left: 60%;
   // width: 16px;
   // height: 10px;
@@ -102,7 +102,7 @@
     sway2 4s ease-in-out infinite alternate;
   animation-delay: 4s;
 }
-.sakura li:nth-child(10) {
+.balloon li:nth-child(10) {
   left: 70%;
   // width: 16px;
   // height: 10px;
@@ -110,7 +110,7 @@
     sway2 4s ease-in-out infinite alternate;
   animation-delay: 4s;
 }
-.sakura li:nth-child(11) {
+.balloon li:nth-child(11) {
   left: 75%;
   // width: 16px;
   // height: 10px;
@@ -118,7 +118,7 @@
     sway2 4s ease-in-out infinite alternate;
   animation-delay: 4s;
 }
-.sakura li:nth-child(12) {
+.balloon li:nth-child(12) {
   left: 80%;
   // width: 24px;
   // height: 15px;
@@ -132,8 +132,8 @@ $index: 0;
 @each $value in History.$Month {
   $index: $index + 1;
 
-  .sakura li:nth-child(#{$index}) {
-    width: 50px;
+  .balloon li:nth-child(#{$index}) {
+    width: 60px;
     height: 60px;
     background: $value;
 
@@ -147,7 +147,7 @@ $index: 0;
   0% {
     top: 100%;
     bottom: -100px;
-    transform: translateX(0);
+    transform: translateX(0), rotate(45deg);
   }
   50% {
     transform: translateX(100px);
@@ -162,13 +162,13 @@ $index: 0;
     transform: translateX(0px) rotate(0deg);
   }
   to {
-    transform: translateX(300px) rotate(-45deg);
+    transform: translateX(150px) rotate(50deg);
   }
 }
 
 @keyframes sway2 {
   from {
-    transform: translateX(200px) rotate(-45deg);
+    transform: translateX(100px) rotate(25deg);
   }
   to {
     transform: translateX(0px) rotate(0deg);
