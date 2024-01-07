@@ -1,20 +1,14 @@
+/// History.tsx : 実装
+//
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import '../scss/History.scss'
 
-const monthCount = [...Array(12)].map((_, i) => i + 1)
+// const _monthCount = [...Array(12)].map((_, i) => i + 1)
+const monthCount = [5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4]
 
 export const History = (): JSX.Element => {
-
-  // const hiddenImageFrame = (num: number) => {
-  //   monthCount.forEach((idx) => {
-  //     let ele: any = document.querySelector(`.image-frame:nth-child(${idx})`)
-  //     if (num !== idx) {
-  //       ele.style.visibility = 'hidden'
-  //     }
-  //   })
-  // }
-
   const ImagesForMonth = () => (
     <>
       {monthCount.map((i : number) => (
@@ -22,10 +16,9 @@ export const History = (): JSX.Element => {
           id={i.toString()}
           key={i}
           className="image-frame"
-          // onClick={() => hiddenImageFrame(i)}
         >
           <motion.img
-            src={`tsukasa(4).jpeg`}
+            src={`2023\\tsukasa_${i}.jpeg`}
             alt="image"
             whileHover={{
               y: 14,

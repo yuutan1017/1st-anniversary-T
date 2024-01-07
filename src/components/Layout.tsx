@@ -16,7 +16,7 @@ export const Layout = ({ children }: any): JSX.Element => {
         <main className="main">{children}</main>
         <footer className="footer-container">
           <span className="footer-text">
-            &copy; 2023 Yuta N. All Rights Reserved.
+            &copy; 2023-2024 Yuta N. All Rights Reserved.
           </span>
         </footer>
         <Balloon />
