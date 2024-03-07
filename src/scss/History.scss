@@ -76,6 +76,14 @@ section {
         height: $image-height;
         border-radius: 7px;
         vertical-align: top;
+
+        pointer-events: none;
+        
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -moz-touch-callout:none;
+        -moz-user-select:none;
+        user-select:none;
       }
       .background {
         z-index: 0;
