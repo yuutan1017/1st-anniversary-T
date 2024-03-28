@@ -18,14 +18,14 @@ export const History = (): JSX.Element => {
           className="image-frame"
         >
           <motion.img
-            src={`2023\\tsukasa_${i}.jpeg`}            
+            src={`2023\\tsukasa_${i}.jpeg`}
             alt="image"
             whileHover={{
               y: 14,
               x: 14,
               transition: { duration: 0.4, ease: 'easeInOut' },
             }}
-            
+            decoding='auto'
           />
           <div className="background"></div>
           <div className="month">
